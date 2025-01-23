@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونتي - Bicola</title>
+    
+    <style>
+        /* تخصيص الجسم */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* إضافة النجوم المتحركة */
+        .star-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            animation: moveStars 30s linear infinite;
+        }
+
+        /* تأثير تحريك النجوم */
+        @keyframes moveStars {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 100%); }
+        }
+
+        /* الهيدر */
+        header {
+            background-color: #333;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            text-align: center;
+            color: white;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* المدونة */
+        .blog {
+            padding: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: white;
+        }
+
+        /* المقال */
+        article {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        article h3 {
+            color: #fff;
+        }
+
+        /* الفيديو */
+        .video-container {
+            margin: 20px 0;
+        }
+
+        /* رابط "اضغط هنا" */
+        .press-here {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .press-here:hover {
+            background-color: #2980b9;
+        }
+
+        /* الوصف الذي يظهر عند الضغط على "اضغط هنا" */
+        .description {
+            display: none;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- توليد النجوم المتحركة -->
+    <div class="star-container">
+        <div class="star" style="top: 10%; left: 5%;"></div>
+        <div class="star" style="top: 20%; left: 50%;"></div>
+        <div class="star" style="top: 30%; left: 80%;"></div>
+        <div class="star" style="top: 40%; left: 25%;"></div>
+        <div class="star" style="top: 60%; left: 70%;"></div>
+        <div class="star" style="top: 80%; left: 10%;"></div>
+    </div>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="container">
+            <h1>مدونة Bicola</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">المدونات</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم المقالات -->
+    <section class="blog">
+        <div class="container">
+            <h2>أحدث المقالات</h2>
+
+            <!-- المقال الأول مع فيديو -->
+            <article>
+                <h3>حساب لفل 44 مهجور للبيع بـ3$</h3>
+                <p>هذا هو النص الأول في مدونتنا. يمكن تعديل هذا النص بأي محتوى تريد إضافته...</p>
+                
+                <!-- إضافة الفيديو من YouTube داخل المقال -->
+                <div class="video-container">
+                    <iframe width="100%" height="315" 
+                    src="https://www.youtube.com/embed/pO-o6wlXaGc?si=wJltv4NC3BfXAHzt" 
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                </div>
+                
+                <!-- رابط "اضغط هنا" لنقل المستخدم إلى الفيديو على YouTube -->
+                <a href="https://youtu.be/pO-o6wlXaGc?si=wJltv4NC3BfXAHzt" class="press-here" target="_blank">اضغط هنا</a>
+            </article>
+
+            <!-- المقال الثاني -->
+            <article>
+                <h3>عنوان المقال الثاني</h3>
+                <p>مقال آخر يمكن أن يحتوي على محتوى مثير للاهتمام. لا تتردد في تخصيصه كما تريد...</p>
+                <a href="https://youtu.be/pO-o6wlXaGc?si=wJltv4NC3BfXAHzt" class="press-here" target="_blank">اضغط هنا</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 جميع الحقوق محفوظة لـ <a href="https://bicola.shop">Bicola.shop</a></p>
+        </div>
+    </footer>
+
+    <!-- إضافة كود JavaScript داخل HTML -->
+    <script>
+        // إضافة التفاعل عند الضغط على "اقرأ المزيد"
+        document.querySelectorAll('.read-more').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // منع الانتقال إلى رابط
+                const description = e.target.nextElementSibling;
+                description.style.display = description.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
