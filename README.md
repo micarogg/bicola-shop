@@ -1,1 +1,0 @@
-# bicola-shop
